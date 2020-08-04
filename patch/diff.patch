@@ -144,7 +144,7 @@ index 3f0fe52d6dc..c1fd799bf64 100644
  configurations {
    dockerPlugins
    aarch64DockerSource
-+  s390xOssDockerSource
++  s390xDockerSource
    dockerSource
    aarch64OssDockerSource
 +  s390xOssDockerSource
