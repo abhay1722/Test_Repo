@@ -36,23 +36,25 @@ index 7b399a4ddc4..b1f33c5b3e1 100644
      integTestRuntimeOnly(project(":libs:elasticsearch-core"))
    }
 diff --git a/buildSrc/src/main/java/org/elasticsearch/gradle/Architecture.java b/buildSrc/src/main/java/org/elasticsearch/gradle/Architecture.java
-index f230d9af86e..aea74e57736 100644
+index f230d9af86e..af4dd27170b 100644
 --- a/buildSrc/src/main/java/org/elasticsearch/gradle/Architecture.java
 +++ b/buildSrc/src/main/java/org/elasticsearch/gradle/Architecture.java
-@@ -23,6 +23,7 @@ public enum Architecture {
- 
+@@ -22,7 +22,8 @@ package org.elasticsearch.gradle;
+ public enum Architecture {
+
      X64,
-     AARCH64,
+-    AARCH64;
++    AARCH64,
 +    S390X;
- 
+
      public static Architecture current() {
          final String architecture = System.getProperty("os.arch", "");
 @@ -32,6 +33,8 @@ public enum Architecture {
                  return X64;
              case "aarch64":
                  return AARCH64;
-+            case "s390x":
-+                return S390X;
++           case "s390x":
++               return S390X;
              default:
                  throw new IllegalArgumentException("can not determine architecture from [" + architecture + "]");
          }
