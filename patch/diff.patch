@@ -42,7 +42,7 @@ index f230d9af86e..aea74e57736 100644
 @@ -23,6 +23,7 @@ public enum Architecture {
  
      X64,
-     AARCH64;
+     AARCH64,
 +    S390X;
  
      public static Architecture current() {
