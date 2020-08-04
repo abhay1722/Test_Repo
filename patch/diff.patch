@@ -277,7 +277,7 @@ index f6e3934d127..55da8fec85d 100644
    configure(commonDebConfig(false, true, 'aarch64'))
  }
  
-+tasks.register('buildS390xOssDeb', Deb) {
++tasks.register('buildS390xDeb', Deb) {
 +  configure(commonDebConfig(true, true, 's390x'))
 +}
 +
