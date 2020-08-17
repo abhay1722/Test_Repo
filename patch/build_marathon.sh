@@ -240,7 +240,6 @@ case "$DISTRO" in
     printf -- "Installing %s %s for %s \n" "$PACKAGE_NAME" "$PACKAGE_VERSION" "$DISTRO" |& tee -a "$LOG_FILE"
     printf -- "Installing dependencies... it may take some time.\n"
 		printf -- "\nOpenJDK dependencies\n" |& tee -a "$LOG_FILE"
-		JAVA_FLAV="ibmsdk"
 		sudo yum install -y git tar wget java-1.8.0-openjdk-devel patch which |& tee -a "$LOG_FILE"
 	  configureAndInstall |& tee -a "$LOG_FILE"
     ;;
